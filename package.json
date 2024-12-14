@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://Aashir1234.github.io/web",
-
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -38,6 +37,6 @@
     "globals": "^15.12.0",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.16",
-    "vite": "^6.0.1"
+    "vite": "^6.0.3"
   }
 }
