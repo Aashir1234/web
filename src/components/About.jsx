@@ -38,7 +38,7 @@ const About = () => {
     </motion.div>
     <motion.p variants={fadeIn("", "", 0.1, 1)}
     className="mt-4 text-secondary text-[17px] 
-    max-w-3xl leading-[30px]"
+    max-w-7xl leading-[30px]"
     >
         Welcome to Mutanx Technologies, where we transform visions into impactful digital solutions.
         We are a forward-focused technology company specializing in app development and cloud services, designed to empower startups and growing businesses. Our mission is to simplify your journey into the digital world by providing seamless development solutions and long-term support, enabling you to focus on what truly matters—achieving your goals.
