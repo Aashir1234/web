@@ -6,22 +6,17 @@ import { StarsCanvas } from "./canvas";
 
 const Hero = () => {
   return (
-    <section className={`relative w-full h-screen mx-auto flex items-center`}>
+    <section className={`relative w-full h-screen mx-auto flex items-center justify-center`}>
       <StarsCanvas />
       <div
-        className={`absolute inset-0 top-[380px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`absolute inset-0 flex flex-col items-center justify-center text-center max-w-7xl mx-auto ${styles.paddingX}`}
       >
-        {/* <div className='flex flex-col justify-center items-center mt-5'>
-          <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
-          <div className='w-1 sm:h-80 h-40 violet-gradient' />
-        </div> */}
-
         <div>
-          <h1 className={`${styles.heroHeadText} text-center text-white`}>
+          <h1 className={`${styles.heroHeadText} text-white`}>
             Mutanx <span className='text-[#915EFF]'>Technologies</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-4 text-center text-white-100 `}>
-          Transforming Visions into Digital Reality.
+          <p className={`${styles.heroSubText} mt-4 text-white-100`}>
+            Transforming Visions into Digital Reality.
           </p>
         </div>
       </div>

@@ -53,15 +53,20 @@ const Contact = () => {
 
 <motion.div
   variants={slideIn("right", "tween", 0.2, 1)}
-  className="flex-[0.5] bg-black-100 p-1 rounded-2xl"
+  className="flex-1 sm:flex-[0.5] bg-black-100 p-1 rounded-2xl"
 >
-  <div className="flex flex-col cal-wrapper"> {/* Add wrapper */}
+  <div className="flex flex-col w-full h-full cal-wrapper"> {/* Ensuring full height and width */}
     <InlineWidget
       url="https://calendly.com/mraashir3/30min?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=110d25&text_color=aca3de&primary_color=8b80c4&back=1&month=2024-12"
-      style={{ overflow: "hidden", width: "100%", height: "100%" }}
+      style={{
+        overflow: "hidden", 
+        width: "100%", // Full width
+        height: "100%" // Full height to occupy parent container
+      }}
     />
   </div>
 </motion.div>
+
 
 
 
