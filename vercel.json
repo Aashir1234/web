@@ -1,6 +1,4 @@
 {
-    "rewrites": [
-      { "source": "/web/(.*)", "destination": "/web/index.html" }
-    ]
-  }
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+}
   
