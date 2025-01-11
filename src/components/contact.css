@@ -1,0 +1,12 @@
+.calendar-container {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+    padding: 0;
+    background-color: #333333;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(194, 168, 168, 0.945);
+    /* height: 100vh; Full viewport height */
+    overflow: hidden; /* Ensure no scrollbars appear */
+}
+  

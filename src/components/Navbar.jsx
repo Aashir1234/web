@@ -23,8 +23,9 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Conditionally render the navbar links based on the current page
-  const isBlogPage = location.pathname.includes("/blog");
+  // Detect current route to conditionally render navbar items
+  const isBlogPage = location.pathname === "/blog";
+  const isPostPage = location.pathname.startsWith("/post/");
 
   return (
     <nav
@@ -52,7 +53,7 @@ const Navbar = () => {
         {/* Render navbar items (visible only on larger screens) */}
         <ul className="list-none sm:flex hidden flex-row gap-10">
           {isBlogPage ? (
-            // Show 'Home' link only on the Blog page
+            // Display 'Home' link only on the Blog page
             <li
               className="text-secondary hover:text-white text-[19px] font-medium cursor-pointer"
               onClick={() => setActive("Home")}
@@ -61,7 +62,18 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
+          ) : isPostPage ? (
+            // Display 'Blog' link only on the Post page
+            <li
+              className="text-secondary hover:text-white text-[19px] font-medium cursor-pointer"
+              onClick={() => setActive("Blog")}
+            >
+              <Link to="/blog" onClick={() => setActive("")}>
+                Blog
+              </Link>
+            </li>
           ) : (
+            // Display full navigation menu on all other pages
             navLinks.map((nav) => (
               <li
                 key={nav.id}
@@ -103,6 +115,18 @@ const Navbar = () => {
                   >
                     <Link to="/" onClick={() => setActive("")}>
                       Home
+                    </Link>
+                  </li>
+                ) : isPostPage ? (
+                  <li
+                    className="font-poppins font-medium cursor-pointer text-[16px] text-secondary hover:text-white"
+                    onClick={() => {
+                      setToggle(false);
+                      setActive("Blog");
+                    }}
+                  >
+                    <Link to="/blog" onClick={() => setActive("")}>
+                      Blog
                     </Link>
                   </li>
                 ) : (

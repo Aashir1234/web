@@ -5,7 +5,6 @@ import { InlineWidget } from "react-calendly";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
-
 const Contact = () => {
   return (
     <div className="mt-12 bg-black-100 rounded-[20px]">
