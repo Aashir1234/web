@@ -266,11 +266,11 @@ import {
       source_code_link: "https://github.com/",
     },
   ];
-  var Blogs_ = [];
+  var Blogs = [];
   // int i;
-  for (let i=0;i<50;i++)
+  for (let i=0;i<500;i++)
   {
-    Blogs_.push(    {
+    Blogs.push(    {
       name: i + "-JavaScript",
       description:
         "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
@@ -292,7 +292,7 @@ import {
       source_code_link: "https://github.com/",
     },);
   }
-  const Blogs = [
+  const Blogs_ = [
     {
       name: "JavaScript",
       description:
